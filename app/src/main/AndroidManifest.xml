@@ -10,6 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".TemperatureActivity"
+            android:label="@string/title_activity_temperature"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".DistanceActivity"
+            android:label="@string/title_activity_distance"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
@@ -22,7 +30,7 @@
         <activity
             android:name=".TipActivity"
             android:label="@string/title_activity_tip"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

@@ -32,6 +32,14 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, TipActivity.class);
         startActivity(i);
     }
+    public void onDistanceClick(View v){
+        Intent i = new Intent(this, DistanceActivity.class);
+        startActivity(i);
+    }
+    public void onTemperatureClick(View v){
+        Intent i = new Intent(this, TemperatureActivity.class);
+        startActivity(i);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
