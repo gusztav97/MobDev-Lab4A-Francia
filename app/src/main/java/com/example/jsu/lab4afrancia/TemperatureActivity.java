@@ -27,7 +27,7 @@ public class TemperatureActivity extends AppCompatActivity {
         });
     }
 
-    public void onClick(View v){
+    public void onTemperatureClick(View v){
         String f = ((EditText) findViewById(R.id.inputF)).getText().toString();
         String c = ((EditText) findViewById(R.id.inputC)).getText().toString();
         if (f.isEmpty()){
