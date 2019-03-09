@@ -6,6 +6,9 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.EditText;
+
+import java.text.DecimalFormat;
 
 public class TipActivity extends AppCompatActivity {
 
@@ -24,6 +27,26 @@ public class TipActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    public void onTipClick(View v){
+        String totalBill = ((EditText) findViewById(R.id.totalBill)).getText().toString();
+        String tipPercentage = ((EditText) findViewById(R.id.tipPercentage)).getText().toString();
+        String numberOfPeople = ((EditText) findViewById(R.id.numOfPeople)).getText().toString();
+        DecimalFormat df = new DecimalFormat("#.##");
+
+        double totalBillEdit = Double.parseDouble(totalBill);
+        double tipPercentageEdit = Double.parseDouble(tipPercentage);
+        double numOfPeopleEdit = Double.parseDouble(numberOfPeople);
+
+        double ActualAmountPerPerson = totalBillEdit / numOfPeopleEdit;
+        double ActualTipPerPerson = (totalBillEdit * (tipPercentageEdit/100)) / numOfPeopleEdit;
+        double totalPerPerson = ActualAmountPerPerson + ActualTipPerPerson;
+
+        ((EditText) findViewById(R.id.totalPerPerson)).setText( df.format(totalPerPerson) );
+
+
+
     }
 
 }
